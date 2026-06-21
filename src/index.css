@@ -1,0 +1,89 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background-color: #000;
+  color: #fff;
+  font-family: 'Inter', ui-sans-serif, system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* The logo ships on a pure-black field; `screen` drops that black into
+   the dark UI so only the glowing mark remains. */
+.logo-blend {
+  mix-blend-mode: screen;
+}
+
+/* Brand gradient text (orange -> blue) */
+.gradient-text {
+  background-image: linear-gradient(95deg, #ff8a2b 0%, #ffb020 28%, #5bb8ff 72%, #2e90ff 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Selection + focus polish */
+::selection {
+  background: rgba(46, 144, 255, 0.35);
+}
+
+textarea {
+  resize: none;
+}
+
+/* Thin, on-brand scrollbar */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(46, 144, 255, 0.4) transparent;
+}
+*::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+*::-webkit-scrollbar-thumb {
+  background: rgba(46, 144, 255, 0.35);
+  border-radius: 999px;
+}
+
+/* Ambient float used by the background glows */
+@keyframes floatGlowA {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+    opacity: 0.6;
+  }
+  50% {
+    transform: translate3d(20px, -26px, 0) scale(1.12);
+    opacity: 0.85;
+  }
+}
+@keyframes floatGlowB {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) scale(1.05);
+    opacity: 0.5;
+  }
+  50% {
+    transform: translate3d(-24px, 18px, 0) scale(1);
+    opacity: 0.75;
+  }
+}
+.glow-a {
+  animation: floatGlowA 11s ease-in-out infinite;
+}
+.glow-b {
+  animation: floatGlowB 13s ease-in-out infinite;
+}
