@@ -33,7 +33,7 @@ export const HOME_URL = 'https://dev2scale.com'
  *    demo ALWAYS reaches the success screen on camera.
  *    Set to false once your webhook is live and you want real errors surfaced.
  */
-export const USE_MOCK_FALLBACK = true
+export const USE_MOCK_FALLBACK = false
 
 /** Response used by the fallback above + when previewing the success screen. */
 export const MOCK_RESPONSE = {
