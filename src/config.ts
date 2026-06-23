@@ -35,11 +35,13 @@ export const HOME_URL = 'https://dev2scale.com'
  */
 export const USE_MOCK_FALLBACK = false
 
-/** Response used by the fallback above + when previewing the success screen. */
+/** Response used by the fallback above + when previewing the success screen.
+ *  bookingLink is null so the demo falls back to CALENDLY_URL above. */
 export const MOCK_RESPONSE = {
   qualified: true,
   score: 8,
-  message: 'Great fit. Book a strategy call.',
+  reason: 'Great fit.',
+  bookingLink: null,
 } as const
 
 // ------------------------------------------------------------

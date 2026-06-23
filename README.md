@@ -78,18 +78,23 @@ The dropdown option lists (`BUSINESS_TYPE_OPTIONS`, `MONTHLY_REVENUE_OPTIONS`,
 ```json
 {
   "qualified": true,
-  "score": 8,
-  "message": "Great fit. Book a strategy call."
+  "score": 12,
+  "reason": "Strong revenue and an urgent timeline.",
+  "bookingLink": "https://calendly.com/your-handle/strategy"
 }
 ```
 
 The results screen branches on `qualified`: `true` → the "You're A Great Fit" booking
-screen, `false` → the "Application Received" screen. `score` and `message` are still
-received but treated as internal and are never displayed to the lead.
+screen, `false` → the "Application Received" screen. The **Book Strategy Session** button
+uses the returned `bookingLink` (falling back to `CALENDLY_URL` when the response omits
+it). `score` and `reason` are received but treated as internal and are never shown to the
+lead.
 
-The client is tolerant of common n8n response shapes — a bare object, an array of items
-(`[ { ... } ]`), or fields wrapped under `json` / `output` / `body` are all normalized
-automatically (see `src/lib/api.ts`).
+The mapper in `src/lib/api.ts` is **shape- and case-tolerant**: it extracts `qualified`,
+`score`, `reason`, and `bookingLink` whether they arrive as a bare object, an array of
+items (`[ { ... } ]`), or nested under `json` / `data` / `result` / `body` envelopes, and
+whether keys are lowercase or capitalized. `qualified` accepts `true`, `"true"`, `1`, or
+`"yes"`. This is why a correct 200 response always drives the right screen.
 
 ### n8n setup notes
 

@@ -11,11 +11,14 @@ export interface LeadFormData {
   timeline: string
 }
 
-/** The response we expect back from the n8n workflow. */
+/** The response we expect back from the n8n workflow.
+ *  `score` and `reason` are internal signals (never shown to the lead);
+ *  `bookingLink` is the Calendly URL the webhook returns for qualified leads. */
 export interface QualificationResponse {
   qualified: boolean
   score: number
-  message: string
+  reason: string
+  bookingLink: string | null
 }
 
 /** Which screen the app is currently showing. */

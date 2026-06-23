@@ -142,7 +142,7 @@ export default function SuccessScreen({
         </p>
 
         <motion.a
-          href={CALENDLY_URL}
+          href={response.bookingLink || CALENDLY_URL}
           target="_blank"
           rel="noopener noreferrer"
           whileHover={{ scale: 1.015 }}
