@@ -10,7 +10,7 @@
  *    On submit, the form sends a POST request with the lead payload here.
  *    Replace this with your n8n "Webhook" node Production URL.
  */
-export const WEBHOOK_URL = 'https://bizzrow.app.n8n.cloud/webhook-test/lead-qualification'
+export const WEBHOOK_URL = 'https://bizzrow.app.n8n.cloud/webhook/lead-qualification'
 
 /**
  * 2. Booking link.
