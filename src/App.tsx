@@ -57,9 +57,9 @@ export default function App() {
       <main className="flex min-h-screen w-full items-center justify-center px-4 py-10 sm:py-14">
         <motion.section
           initial={{ opacity: 0, y: 24, scale: 0.98 }}
-          animate={{ opacity: 1, y: 0, scale: 1 }}
+          animate={{ opacity: 2, y: 0, scale: 1 }}
           transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-          className="relative w-full max-w-[480px]"
+          className="relative w-full max-w-[500px]"
         >
           {/* Gradient hairline frame */}
           <div className="absolute -inset-px rounded-[28px] bg-gradient-to-b from-white/15 via-white/[0.04] to-transparent" aria-hidden />
