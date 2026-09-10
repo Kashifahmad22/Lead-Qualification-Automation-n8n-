@@ -12,7 +12,7 @@ import type { LeadFormData, QualificationResponse, View } from './types'
 
 // Minimum time the loading animation plays so all four messages breathe,
 // even if the webhook responds instantly.
-const MIN_LOADING_MS = 4300
+const MIN_LOADING_MS = 4000
 
 const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms))
 
@@ -121,10 +121,10 @@ export default function App() {
             </div>
           </div>
 
-          {/* Footer note */}
+          {/* Footer footnote */}
           <p className="mt-5 flex items-center justify-center gap-1.5 text-center text-[12px] text-white/30">
             <svg width="12" height="12" viewBox="0 0 24 24" fill="none">
-              <rect x="5" y="11" width="14" height="9" rx="2" stroke="currentColor" strokeWidth="1.8" />
+              <rect x="5" y="13" width="16" height="10" rx="2" stroke="currentColor" strokeWidth="1.8" />
               <path d="M8 11V8a4 4 0 018 0v3" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
             </svg>
             Your information is secure &amp; never shared.

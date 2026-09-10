@@ -24,7 +24,7 @@ export const CALENDLY_URL = 'https://calendly.com/mkkashif2002/30min'
  *     Where the "Application Received" screen's Return Home button points
  *     (your homepage). Placeholder — swap in your real link.
  */
-export const HOME_URL = 'https://dev2scale.com'
+export const HOME_URL = 'https://dev2scale.com/'
 
 /**
  * 3. Demo safety net.
@@ -55,6 +55,7 @@ export const BUSINESS_TYPE_OPTIONS = [
   'Consultant',
   'Agency Owner',
   'Other',
+  
 ] as const
 
 export const MONTHLY_REVENUE_OPTIONS = ['Under $5k', '$5k-$20k', '$20k+'] as const
