@@ -161,3 +161,7 @@ dev2scale-lead-demo/
   never shown to the lead.
 - Branding (blue `#2E90FF`, orange `#FF8A2B`, gradient accents) is defined in
   `tailwind.config.js` and `src/index.css`.
+
+
+##Form Integration notes
+Integrate as a lead qualification form for dev2scale to qualify them and book directly into my calendar.
